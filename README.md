@@ -1,16 +1,3 @@
-# 💫 About Me:
-I am Salem (Comrade)
-
-Founder of Comrade Labs, a freelance software development practice.
-
-Full-stack developer with expertise in Python (Flask,SQLAlchemy), JavaScript, HTML/CSS, and SQL.
-
-Active in the Solana and Web3 ecosystem, with background in smart contract security research and community moderation.
-
-Also holds a vocational certificate in Solar Power Energy.
-
-Linktree: https://linktr.ee/comradeonboard
-
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/comradeweb4) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/comradeonboard) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/salemgaytus) [![Pinterest](https://img.shields.io/badge/Pinterest-%23E60023.svg?logo=Pinterest&logoColor=white)](https://pinterest.com/comradeonboard) [![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white)](https://reddit.com/user/comradeweb3) [![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?logo=TikTok&logoColor=white)](https://tiktok.com/@comradeonboard) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/comradeweb3) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:comradeonboard@gmail.com)
 
