@@ -19,12 +19,12 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <p>
-          I&apos;m Salem — a Software Engineer who has spent the last 2+ years building for the web.
+          I&apos;m Salem, a Software Engineer who has spent the last 2+ years building for the web.
         </p>
         <p>
           I work across the stack: crafting delightful UIs with React, wiring up clean APIs with
           Node.js and Python, and shipping full-stack apps end to end. I love turning ideas into
-          polished products — and sharing the journey as I go.
+          polished products, and sharing the journey as I go.
         </p>
       </motion.div>
       <div className="stats-grid">

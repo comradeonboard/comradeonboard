@@ -5,11 +5,11 @@ import { GITHUB_URL, EMAIL_URL } from '../data/socials.js'
 
 const TERMINAL_LINES = [
   { cmd: 'whoami', out: 'salem.gaytus' },
-  { cmd: 'cat ~/role.txt', out: 'Software Engineer — building for the web' },
+  { cmd: 'cat ~/role.txt', out: 'Software Engineer, building for the web' },
   { cmd: 'echo "welcome to my profile"', out: 'welcome to my profile 👋' }
 ]
 
-const ROLES = ['full-stack apps', 'clean APIs', 'delightful UIs', 'open-source experiments']
+const ROLES = ['delightful UIs', 'clean APIs', 'scalable backends', 'open-source experiments']
 
 function useTypedLines(onDone) {
   const [lineIdx, setLineIdx] = useState(0)
@@ -135,8 +135,9 @@ export default function Hero() {
             <h1 className="hero-name">
               Salem <span>Gaytus</span>
             </h1>
-            <p className="hero-role">
-              Software Engineer · I craft <span className="role-typed">{role}</span>
+            <p className="hero-role">Software Engineer &amp; Full-Stack Developer</p>
+            <p className="hero-role-sub">
+              I craft <span className="role-typed">{role}</span>
               <span className="caret" />
             </p>
             <div className="hero-actions">
