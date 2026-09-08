@@ -26,16 +26,14 @@ export default function Footer() {
                 href={s.href}
                 target={s.id === 'email' ? undefined : '_blank'}
                 rel="noreferrer"
+                aria-label={s.label}
+                title={s.label}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
               >
                 <Icon />
-                <span>
-                  <span className="social-label">{s.label}</span>
-                  <span className="social-handle">{s.handle}</span>
-                </span>
               </motion.a>
             )
           })}
