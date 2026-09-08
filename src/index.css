@@ -602,6 +602,34 @@ img {
   color: var(--muted);
 }
 
+.tl-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -26px 0 30px;
+}
+
+.tl-stat {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.tl-stat strong {
+  color: var(--cyan);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.tl-stat-sync {
+  border-style: dashed;
+  color: var(--green);
+}
+
 /* ---------- github activity ---------- */
 .gh-status {
   font-family: var(--mono);

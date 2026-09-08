@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { experiences } from '../data/experience.js'
+import GitHubStats from './GitHubStats.jsx'
 
 export default function ExperienceTimeline() {
   return (
     <section className="section" id="timeline">
       <span className="section-kicker">// $ git log --oneline --reverse</span>
       <h2 className="section-title">Two years of building</h2>
+      <GitHubStats />
       <div className="timeline">
         {experiences.map((exp, i) => (
           <div key={exp.title}>
