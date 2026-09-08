@@ -636,6 +636,72 @@ img {
 }
 
 /* ---------- responsive ---------- */
+@media (max-width: 760px) {
+  .hero {
+    padding: 100px 20px 40px;
+    gap: 28px;
+  }
+
+  .hero-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .hero-name {
+    font-size: clamp(38px, 10vw, 60px);
+  }
+
+  .hero-role {
+    font-size: 18px;
+  }
+
+  .hero-role-sub {
+    font-size: 15px;
+  }
+
+  .terminal-body {
+    font-size: 13px;
+    padding: 14px 16px;
+    min-height: 150px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-text p:first-child {
+    font-size: 19px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+  }
+
+  .stat-card,
+  .skill-card,
+  .social-link {
+    padding: 16px;
+  }
+
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 @media (max-width: 560px) {
   .follow-prompt {
     left: 16px;
@@ -643,13 +709,8 @@ img {
     bottom: 16px;
     width: auto;
   }
+
   .nav {
     padding: 14px 20px;
-  }
-  .section {
-    padding: 70px 20px;
-  }
-  .footer {
-    padding: 60px 20px 30px;
   }
 }
