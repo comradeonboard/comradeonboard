@@ -4,7 +4,6 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
 import Footer from './components/Footer.jsx'
-import FollowPrompt from './components/FollowPrompt.jsx'
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
         <Skills />
       </main>
       <Footer />
-      <FollowPrompt />
     </div>
   )
 }
