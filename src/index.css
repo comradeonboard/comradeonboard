@@ -292,6 +292,28 @@ img {
   text-align: center;
 }
 
+.hero-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 2px solid rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12), 0 0 30px rgba(34, 211, 238, 0.25);
+  margin: 0 auto 26px;
+  display: block;
+  object-fit: cover;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
 .hero-greeting {
   font-family: var(--mono);
   color: var(--cyan);

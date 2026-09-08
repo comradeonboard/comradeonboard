@@ -121,6 +121,16 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
+            <motion.img
+              className="hero-avatar"
+              src="https://github.com/comradeonboard.png"
+              alt="Salem Gaytus"
+              width="112"
+              height="112"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+            />
             <p className="hero-greeting">// hey there, I&apos;m</p>
             <h1 className="hero-name">
               Salem <span>Gaytus</span>
