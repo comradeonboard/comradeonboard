@@ -367,6 +367,60 @@ img {
   margin-bottom: 40px;
 }
 
+/* ---------- about ---------- */
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.about-text p:first-child {
+  font-size: 22px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px;
+  border-radius: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(74, 222, 128, 0.45);
+  box-shadow: 0 12px 32px rgba(74, 222, 128, 0.1);
+}
+
+.stat-value {
+  font-family: var(--display);
+  font-size: 38px;
+  font-weight: 700;
+  background: linear-gradient(92deg, var(--cyan), var(--green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
