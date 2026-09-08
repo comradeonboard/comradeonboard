@@ -1,79 +1,158 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { GitHubIcon, MailIcon } from './icons.jsx'
+import { GITHUB_URL, EMAIL_URL } from '../data/socials.js'
 
-export default function Hero() {
-  const dialRef = useRef(null)
-  const [rotation, setRotation] = useState(0)
+const TERMINAL_LINES = [
+  { cmd: 'whoami', out: 'salem.gaytus' },
+  { cmd: 'cat ~/role.txt', out: 'Software Engineer, building for the web' },
+  { cmd: 'echo "welcome to my profile"', out: 'welcome to my profile 👋' }
+]
+
+const ROLES = ['delightful UIs', 'clean APIs', 'scalable backends', 'open-source experiments']
+
+function useTypedLines(onDone) {
+  const [lineIdx, setLineIdx] = useState(0)
+  const [typed, setTyped] = useState('')
+  const [completed, setCompleted] = useState([])
 
   useEffect(() => {
-    const onMove = (e) => {
-      const cx = window.innerWidth / 2
-      const cy = window.innerHeight / 2
-      const angle = Math.atan2(e.clientY - cy, e.clientX - cx) * (180 / Math.PI)
-      setRotation(angle * 0.3)
+    if (lineIdx >= TERMINAL_LINES.length) {
+      onDone()
+      return
     }
-    window.addEventListener('mousemove', onMove)
-    return () => window.removeEventListener('mousemove', onMove)
-  }, [])
+    const line = TERMINAL_LINES[lineIdx]
+    if (typed.length < line.cmd.length) {
+      const t = setTimeout(() => setTyped(line.cmd.slice(0, typed.length + 1)), 55 + Math.random() * 45)
+      return () => clearTimeout(t)
+    }
+    const t = setTimeout(() => {
+      setCompleted((prev) => [...prev, line])
+      setTyped('')
+      setLineIdx((i) => i + 1)
+    }, 420)
+    return () => clearTimeout(t)
+  }, [typed, lineIdx, onDone])
 
-  // build 24 tick marks for the radial dial
-  const ticks = Array.from({ length: 24 }, (_, i) => i)
+  return { lineIdx, typed, completed }
+}
+
+function useRoleTyper(roles) {
+  const [text, setText] = useState('')
+  useEffect(() => {
+    let roleIdx = 0
+    let char = 0
+    let deleting = false
+    let timer
+    const tick = () => {
+      const role = roles[roleIdx]
+      if (!deleting) {
+        char++
+        setText(role.slice(0, char))
+        if (char === role.length) {
+          deleting = true
+          timer = setTimeout(tick, 1800)
+          return
+        }
+        timer = setTimeout(tick, 70)
+      } else {
+        char--
+        setText(role.slice(0, char))
+        if (char === 0) {
+          deleting = false
+          roleIdx = (roleIdx + 1) % roles.length
+          timer = setTimeout(tick, 400)
+          return
+        }
+        timer = setTimeout(tick, 40)
+      }
+    }
+    timer = setTimeout(tick, 500)
+    return () => clearTimeout(timer)
+  }, [roles])
+  return text
+}
+
+export default function Hero() {
+  const [booted, setBooted] = useState(false)
+  const handleDone = useCallback(() => setBooted(true), [])
+  const { lineIdx, typed, completed } = useTypedLines(handleDone)
+  const role = useRoleTyper(ROLES)
 
   return (
-    <section className="hero" id="hero">
-      <div className="hero-kicker">// SYNAPTIC LEDGER — FULL STACK ARCHITECT</div>
-
-      <div className="hero-dial" ref={dialRef} style={{ transform: `rotate(${rotation}deg)` }}>
-        <svg viewBox="0 0 200 200">
-          <defs>
-            <linearGradient id="dial-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00F5FF" />
-              <stop offset="100%" stopColor="#7000FF" />
-            </linearGradient>
-          </defs>
-          <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(0,245,255,0.1)" strokeWidth="1" />
-          <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(112,0,255,0.08)" strokeWidth="1" />
-          {ticks.map((i) => {
-            const angle = (i / 24) * 360 - 90
-            const rad = (angle * Math.PI) / 180
-            const x1 = 100 + Math.cos(rad) * 88
-            const y1 = 100 + Math.sin(rad) * 88
-            const x2 = 100 + Math.cos(rad) * (i % 3 === 0 ? 76 : 82)
-            const y2 = 100 + Math.sin(rad) * (i % 3 === 0 ? 76 : 82)
-            return (
-              <line
-                key={i}
-                x1={x1}
-                y1={y1}
-                x2={x2}
-                y2={y2}
-                stroke={i % 3 === 0 ? 'url(#dial-grad)' : 'rgba(100,116,139,0.3)'}
-                strokeWidth={i % 3 === 0 ? 1.5 : 0.8}
-              />
-            )
-          })}
-        </svg>
-        <div className="hero-dial-center" style={{ transform: `rotate(${-rotation}deg)` }}>
-          <div className="hero-dial-number">730</div>
-          <div className="hero-dial-label">DAYS OF DEPLOYMENT</div>
+    <section className="hero" id="top">
+      <motion.div
+        className="terminal"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="terminal-bar">
+          <span className="terminal-dot r" />
+          <span className="terminal-dot y" />
+          <span className="terminal-dot g" />
+          <span className="terminal-title">salem@gaytus: ~</span>
         </div>
-      </div>
+        <div className="terminal-body">
+          {completed.map((l) => (
+            <div className="t-line" key={l.cmd}>
+              <div>
+                <span className="t-prompt">$</span>
+                <span className="t-cmd">{l.cmd}</span>
+              </div>
+              <div className="t-out">{l.out}</div>
+            </div>
+          ))}
+          {lineIdx < TERMINAL_LINES.length && (
+            <div className="t-line">
+              <span className="t-prompt">$</span>
+              <span className="t-cmd">{typed}</span>
+              <span className="t-cursor" />
+            </div>
+          )}
+        </div>
+      </motion.div>
 
-      <h1 className="hero-title">
-        Two Years of <span>Full Stack</span> Evolution
-      </h1>
-      <p className="hero-sub">
-        A chronological data-stream mapping 24 months of building, shipping, and scaling — from
-        first commit to system architecture.
-      </p>
-
-      <div className="hero-actions">
-        <button className="btn btn-primary pulse" onClick={() => document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' })}>
-          ▶ Start Sequence
-        </button>
-        <a className="btn btn-ghost" href="#contact">
-          Connect
-        </a>
-      </div>
+      <AnimatePresence>
+        {booted && (
+          <motion.div
+            className="hero-content"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <motion.img
+              className="hero-avatar"
+              src="https://github.com/comradeonboard.png"
+              alt="Salem Gaytus"
+              width="112"
+              height="112"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+            />
+            <p className="hero-greeting">// hey there, I&apos;m</p>
+            <h1 className="hero-name">
+              Salem <span>Gaytus</span>
+            </h1>
+            <p className="hero-role">Software Engineer &amp; Full-Stack Developer</p>
+            <p className="hero-role-sub">
+              I craft <span className="role-typed">{role}</span>
+              <span className="caret" />
+            </p>
+            <div className="hero-actions">
+              <a className="btn btn-primary pulse" href={GITHUB_URL} target="_blank" rel="noreferrer">
+                <GitHubIcon />
+                Follow @comradeonboard
+              </a>
+              <a className="btn btn-ghost" href={EMAIL_URL}>
+                <MailIcon />
+                Say hello
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }
