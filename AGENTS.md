@@ -20,6 +20,12 @@
 - `src/components/ExperienceTimeline.jsx` renders the "Two years of building" section (`#timeline`) from `src/data/experience.js`
 - Vertical quarter-by-quarter list: Year 1 nodes cyan, Year 2 nodes green; edit data file to change milestones
 
+## Live GitHub activity
+- `src/components/GitHubActivity.jsx` renders the "Live from GitHub" section (`#activity`) right after the timeline
+- `src/hooks/useGitHubActivity.js` fetches the user's public events + recently pushed repos from `api.github.com` at page load — no auth token (public data only; unauthenticated rate limit 60 req/h per IP)
+- Username is derived from `GITHUB_URL` in `src/data/socials.js`
+- If the API is rate-limited/unreachable the section shows a muted "activity unavailable" line instead of breaking the page
+
 ## Notes
 - `vite.config.js` sets `server.allowedHosts: true` — required because the Base44 preview proxies a rotating hostname
 - `CHOKIDAR_USEPOLLING=true` is set so Vite hot reload works through the bind mount

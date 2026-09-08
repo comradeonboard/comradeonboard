@@ -602,6 +602,121 @@ img {
   color: var(--muted);
 }
 
+/* ---------- github activity ---------- */
+.gh-status {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.gh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.gh-card {
+  padding: 22px;
+  border-radius: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gh-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 12px 32px rgba(34, 211, 238, 0.12);
+}
+
+.gh-card-title {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--green);
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.gh-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gh-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.gh-item-col {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gh-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.gh-dot.gh-pr,
+.gh-dot.gh-star {
+  background: var(--green);
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
+}
+
+.gh-item-text {
+  color: var(--muted);
+}
+
+.gh-repo {
+  color: var(--cyan);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.gh-repo:hover {
+  text-decoration: underline;
+}
+
+.gh-item-desc {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.gh-item-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.gh-item-col .gh-item-meta {
+  margin-left: 0;
+}
+
+.gh-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gh-lang-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
 /* ---------- footer ---------- */
 .footer {
   border-top: 1px solid var(--border);
