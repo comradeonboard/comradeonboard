@@ -66,7 +66,7 @@ export default function GitHubActivity() {
                         {r.name}
                       </a>
                     </span>
-                    <span className="gh-item-desc">{r.description || '—'}</span>
+                    <span className="gh-item-desc">{r.description || ''}</span>
                     <span className="gh-item-meta">
                       <span className="gh-lang">
                         <span

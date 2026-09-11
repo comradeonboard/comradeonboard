@@ -1,0 +1,193 @@
+/* ---------- README studio ---------- */
+.studio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 32px 60px;
+}
+
+.studio-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.studio-head .section-title {
+  margin-bottom: 0;
+}
+
+.studio-hint {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.studio-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: calc(100vh - 260px);
+  min-height: 420px;
+}
+
+.studio-editor,
+.studio-preview {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: auto;
+  backdrop-filter: blur(10px);
+}
+
+.studio-editor {
+  padding: 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text);
+  resize: none;
+  outline: none;
+  white-space: pre-wrap;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.studio-editor:focus {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.12);
+}
+
+.studio-preview {
+  padding: 28px;
+}
+
+/* GitHub-style markdown body (dark) */
+.readme-body {
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.readme-body h1 {
+  font-family: var(--display);
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0.67em 0;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #21262d;
+}
+
+.readme-body h2 {
+  font-family: var(--display);
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1em 0 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #21262d;
+}
+
+.readme-body h3 {
+  font-family: var(--display);
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 1em 0 0.5em;
+}
+
+.readme-body p {
+  margin: 0 0 16px;
+}
+
+.readme-body a {
+  color: #58a6ff;
+}
+
+.readme-body a:hover {
+  text-decoration: underline;
+}
+
+.readme-body img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 0;
+}
+
+.readme-body hr {
+  border: 0;
+  border-top: 1px solid #21262d;
+  margin: 24px 0;
+}
+
+.readme-body ul {
+  margin: 0 0 16px;
+  padding-left: 2em;
+  list-style: disc;
+}
+
+.readme-body li {
+  margin-bottom: 4px;
+}
+
+.readme-body code {
+  font-family: var(--mono);
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  background: rgba(110, 118, 129, 0.4);
+}
+
+.readme-body pre {
+  padding: 16px;
+  border-radius: 10px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  overflow: auto;
+  margin-bottom: 16px;
+}
+
+.readme-body pre code {
+  padding: 0;
+  background: none;
+}
+
+.readme-body blockquote {
+  padding: 0 1em;
+  border-left: 0.25em solid #3b434b;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.readme-body table {
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.readme-body th,
+.readme-body td {
+  border: 1px solid #21262d;
+  padding: 6px 13px;
+}
+
+.readme-body th {
+  background: rgba(110, 118, 129, 0.2);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .studio-split {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .studio-editor {
+    min-height: 300px;
+  }
+
+  .studio-preview {
+    max-height: 70vh;
+  }
+}
