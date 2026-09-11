@@ -121,6 +121,17 @@ img {
   color: transparent;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.nav-right .btn {
+  flex-shrink: 0;
+}
+
 /* ---------- buttons ---------- */
 .btn {
   display: inline-flex;
@@ -725,7 +736,7 @@ img {
 
 .gh-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 16px;
 }
 
@@ -984,6 +995,19 @@ img {
 
 @media (max-width: 560px) {
   .nav {
-    padding: 14px 20px;
+    padding: 12px 14px;
+  }
+
+  .nav-logo {
+    font-size: 17px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .nav-right .btn-sm {
+    padding: 8px 12px;
+    font-size: 13px;
   }
 }

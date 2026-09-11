@@ -178,6 +178,10 @@
 }
 
 @media (max-width: 900px) {
+  .studio {
+    padding: 90px 16px 40px;
+  }
+
   .studio-split {
     grid-template-columns: 1fr;
     height: auto;
@@ -185,9 +189,36 @@
 
   .studio-editor {
     min-height: 300px;
+    padding: 16px;
+    font-size: 12px;
   }
 
   .studio-preview {
     max-height: 70vh;
+    padding: 16px;
+  }
+
+  /* GitHub mobile-style table scrolling */
+  .readme-body table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .readme-body {
+    font-size: 15px;
+  }
+
+  .readme-body h2 {
+    font-size: 1.35em;
+  }
+}
+
+@media (max-width: 560px) {
+  .studio {
+    padding: 84px 12px 32px;
+  }
+
+  .studio-hint {
+    font-size: 12px;
   }
 }
