@@ -419,6 +419,8 @@ img {
 }
 
 .stat-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -426,13 +428,43 @@ img {
   border-radius: 14px;
   background: var(--panel);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.07), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px) scale(1.02);
   border-color: rgba(74, 222, 128, 0.45);
-  box-shadow: 0 12px 32px rgba(74, 222, 128, 0.1);
+  box-shadow: 0 14px 36px rgba(74, 222, 128, 0.14);
+}
+
+.stat-card:hover::before {
+  left: 120%;
+}
+
+.stat-card:hover .stat-value {
+  transform: scale(1.08);
+}
+
+.stat-value {
+  display: inline-block;
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .stat-value {
@@ -457,6 +489,8 @@ img {
 }
 
 .skill-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -465,24 +499,54 @@ img {
   background: var(--panel);
   border: 1px solid var(--border);
   cursor: default;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.07), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px) scale(1.02);
   border-color: rgba(34, 211, 238, 0.45);
-  box-shadow: 0 12px 32px rgba(34, 211, 238, 0.12);
+  box-shadow: 0 14px 36px rgba(34, 211, 238, 0.16);
+}
+
+.skill-card:hover::before {
+  left: 120%;
 }
 
 .skill-card img {
   width: 30px;
   height: 30px;
   border-radius: 6px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-card:hover img {
+  transform: scale(1.18) rotate(-6deg);
 }
 
 .skill-name {
   font-weight: 600;
   font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-name {
+  color: #d9fbff;
 }
 
 /* ---------- timeline ---------- */
@@ -554,17 +618,39 @@ img {
 }
 
 .tl-card {
+  position: relative;
+  overflow: hidden;
   padding: 20px 22px;
   border-radius: 14px;
   background: var(--panel);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tl-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.07), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
 }
 
 .tl-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.01);
   border-color: rgba(34, 211, 238, 0.45);
-  box-shadow: 0 12px 32px rgba(34, 211, 238, 0.12);
+  box-shadow: 0 14px 36px rgba(34, 211, 238, 0.16);
+}
+
+.tl-card:hover::before {
+  left: 120%;
 }
 
 .tl-item.year-2 .tl-card:hover {
@@ -644,17 +730,39 @@ img {
 }
 
 .gh-card {
+  position: relative;
+  overflow: hidden;
   padding: 22px;
   border-radius: 14px;
   background: var(--panel);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gh-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
 }
 
 .gh-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.01);
   border-color: rgba(34, 211, 238, 0.45);
-  box-shadow: 0 12px 32px rgba(34, 211, 238, 0.12);
+  box-shadow: 0 14px 36px rgba(34, 211, 238, 0.16);
+}
+
+.gh-card:hover::before {
+  left: 120%;
 }
 
 .gh-card-title {
@@ -772,13 +880,18 @@ img {
   border-radius: 14px;
   background: var(--panel);
   border: 1px solid var(--border);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .social-link:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.06) rotate(-3deg);
   border-color: rgba(34, 211, 238, 0.45);
-  box-shadow: 0 12px 32px rgba(34, 211, 238, 0.12);
+  box-shadow: 0 14px 36px rgba(34, 211, 238, 0.18);
+  background: rgba(34, 211, 238, 0.08);
 }
 
 .social-link svg {
@@ -786,6 +899,11 @@ img {
   height: 22px;
   color: var(--cyan);
   flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-link:hover svg {
+  transform: scale(1.15);
 }
 
 .footer-bottom {
