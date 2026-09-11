@@ -14,6 +14,9 @@ export default function Nav() {
         salem<span>.dev</span>
       </a>
       <div className="nav-right">
+        <a className="btn btn-ghost btn-sm" href="#/readme">
+          README Studio
+        </a>
         <a className="btn btn-primary btn-sm" href={GITHUB_URL} target="_blank" rel="noreferrer">
           <GitHubIcon />
           Follow

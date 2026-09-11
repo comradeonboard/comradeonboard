@@ -12,7 +12,7 @@ export default function ExperienceTimeline() {
         {experiences.map((exp, i) => (
           <div key={exp.title}>
             {exp.year === 2 && experiences[i - 1]?.year === 1 && (
-              <span className="tl-year-label">— YEAR 2 —</span>
+              <span className="tl-year-label">YEAR 2</span>
             )}
             <motion.div
               className={`tl-item ${exp.year === 2 ? 'year-2' : ''}`}
