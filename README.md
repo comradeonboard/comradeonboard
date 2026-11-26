@@ -2,8 +2,6 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=22D3EE&center=true&vCenter=true&random=false&width=650&lines=Hi+%F0%9F%91%8B%2C+I'm+Salem+Gaytus;Software+Engineer+%C2%B7+Dev+%7C+AI+%7C+Crypto;Building+for+the+web+%F0%9F%9A%80;Crafting+delightful+UIs+%26+clean+APIs;Shipping+full-stack+products+end+to+end" alt="Typing SVG" />
 
-<img src="https://ghchart.rshah.org/22d3ee/comradeonboard" alt="Salem's contribution chart" />
-
 </div>
 
 ---
@@ -41,15 +39,6 @@
 
 ---
 
-## 🐍 Contribution Snake
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/comradeonboard/comradeonboard/output/github-contribution-grid-snake-dark.svg" />
-  <img src="https://raw.githubusercontent.com/comradeonboard/comradeonboard/output/github-contribution-grid-snake.svg" alt="Snake animation" />
-</picture>
-
----
-
 ## 🤝 Connect with me
 
 <div align="center">
@@ -63,10 +52,4 @@
 
 </div>
 
----
 
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:22D3EE,100:0D1117&height=90&section=footer" width="100%" />
-
-</div>
