@@ -50,35 +50,6 @@
 
 ---
 
-## 🚀 Featured Projects
-
-<div align="center">
-
-<h3>
-  <a href="https://github.com/comradeonboard/agentrouter-chatbot">🤖 agentrouter-chatbot</a>
-</h3>
-
-<a href="https://github.com/comradeonboard/agentrouter-chatbot"><img src="https://img.shields.io/github/languages/top/comradeonboard/agentrouter-chatbot?style=flat-square&color=22D3EE" alt="Top language" /></a>
-<a href="https://github.com/comradeonboard/agentrouter-chatbot/stargazers"><img src="https://img.shields.io/github/stars/comradeonboard/agentrouter-chatbot?style=flat-square&color=22D3EE&label=stars" alt="Stars" /></a>
-<a href="https://github.com/comradeonboard/agentrouter-chatbot/network/members"><img src="https://img.shields.io/github/forks/comradeonboard/agentrouter-chatbot?style=flat-square&color=22D3EE&label=forks" alt="Forks" /></a>
-<a href="https://github.com/comradeonboard/agentrouter-chatbot/commits"><img src="https://img.shields.io/github/last-commit/comradeonboard/agentrouter-chatbot?style=flat-square&color=22D3EE&label=last%20commit" alt="Last commit" /></a>
-
-<br/>
-<br/>
-
-<h3>
-  <a href="https://github.com/comradeonboard/crypto-trading-platform">💹 crypto-trading-platform</a>
-</h3>
-
-<a href="https://github.com/comradeonboard/crypto-trading-platform"><img src="https://img.shields.io/github/languages/top/comradeonboard/crypto-trading-platform?style=flat-square&color=22D3EE" alt="Top language" /></a>
-<a href="https://github.com/comradeonboard/crypto-trading-platform/stargazers"><img src="https://img.shields.io/github/stars/comradeonboard/crypto-trading-platform?style=flat-square&color=22D3EE&label=stars" alt="Stars" /></a>
-<a href="https://github.com/comradeonboard/crypto-trading-platform/network/members"><img src="https://img.shields.io/github/forks/comradeonboard/crypto-trading-platform?style=flat-square&color=22D3EE&label=forks" alt="Forks" /></a>
-<a href="https://github.com/comradeonboard/crypto-trading-platform/commits"><img src="https://img.shields.io/github/last-commit/comradeonboard/crypto-trading-platform?style=flat-square&color=22D3EE&label=last%20commit" alt="Last commit" /></a>
-
-</div>
-
----
-
 ## 🤝 Connect with me
 
 <div align="center">
