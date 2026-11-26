@@ -33,6 +33,9 @@
 <a href="https://github.com/comradeonboard?tab=repositories">
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fcomradeonboard&query=%24.public_repos&label=public%20repos&style=for-the-badge&color=22D3EE" alt="Public repos" />
 </a>
+<a href="https://comradeonboard.github.io">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=comradeonboard.site" alt="Site visitors" />
+</a>
 
 </div>
 
