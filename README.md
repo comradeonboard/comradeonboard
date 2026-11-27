@@ -25,15 +25,11 @@
 <img src="https://streak-stats.demolab.com?user=comradeonboard&theme=tokyonight&hide_border=true&ring=22D3EE&fire=22D3EE&currStreakNum=22D3EE&sideNums=22D3EE&currStreakLabel=22D3EE" alt="GitHub streak" width="480" />
 <br/>
 <br/>
-<a href="https://github.com/comradeonboard">
-  <img src="https://img.shields.io/github/followers/comradeonboard?label=Followers&style=for-the-badge&color=22D3EE" alt="Followers" />
-</a>
-<a href="https://github.com/comradeonboard?tab=repositories">
-  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fcomradeonboard&query=%24.public_repos&label=public%20repos&style=for-the-badge&color=22D3EE" alt="Public repos" />
-</a>
-<a href="https://comradeonboard.github.io">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=comradeonboard.site" alt="Site visitors" />
-</a>
+<p align="center">
+  <a href="https://comradeonboard.github.io">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=comradeonboard.site" alt="Site visitors" />
+  </a>
+</p>
 
 </div>
 
